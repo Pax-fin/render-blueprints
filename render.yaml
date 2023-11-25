@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: Backend Dev
+    runtime: image
+    image:
+      url: ghcr.io/pax-fin/be-app:main
+      creds:
+        fromRegistryCreds:
+          name: paxfin-ghcr
+
