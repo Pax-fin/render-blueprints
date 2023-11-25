@@ -2,6 +2,7 @@ services:
   - type: web
     name: Backend Dev
     runtime: image
+    plan: free
     image:
       url: ghcr.io/pax-fin/be-app:main
       creds:
