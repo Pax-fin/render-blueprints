@@ -4,7 +4,7 @@ services:
     runtime: image
     plan: free
     image:
-      url: ghcr.io/pax-fin/be-app:main
+      url: ghcr.io/pax-fin/be-app:v0.0.1
       creds:
         fromRegistryCreds:
           name: paxfin-ghcr
@@ -13,7 +13,7 @@ services:
     runtime: image
     plan: free
     image:
-      url: ghcr.io/pax-fin/fe-app:main
+      url: ghcr.io/pax-fin/fe-app:v0.0.2
       creds:
         fromRegistryCreds:
           name: paxfin-ghcr
