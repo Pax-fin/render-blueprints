@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: Backend Dev
+    name: prod-backend
     runtime: image
     plan: free
     image:
