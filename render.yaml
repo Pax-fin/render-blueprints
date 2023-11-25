@@ -8,4 +8,12 @@ services:
       creds:
         fromRegistryCreds:
           name: paxfin-ghcr
-
+  - type: web
+    name: prod-frontend
+    runtime: image
+    plan: free
+    image:
+      url: ghcr.io/pax-fin/fe-app:main
+      creds:
+        fromRegistryCreds:
+          name: paxfin-ghcr
