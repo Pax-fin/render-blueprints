@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: Backend Dev
+    name: Backend Prod
     runtime: image
     image:
       url: ghcr.io/pax-fin/be-app:main
