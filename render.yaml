@@ -8,6 +8,32 @@ services:
       creds:
         fromRegistryCreds:
           name: paxfin-ghcr
+    envVars:
+        - key: POSTGRES_HOST
+          fromDatabase:
+            name: prod-pax-db
+            property: host
+        - key: POSTGRES_PORT
+          fromDatabase:
+            name: prod-pax-db
+            property: port
+        - key: POSTGRES_USER
+          fromDatabase:
+            name: prod-pax-db
+            property: user
+        - key: POSTGRES_PASSWORD
+          fromDatabase:
+            name: prod-pax-db
+            property: password
+        - key: POSTGRES_DB
+          fromDatabase:
+            name: prod-pax-db
+            property: database
+        - key: POSTGRES_URL
+          fromDatabase:
+            name: prod-pax-db
+            property: connectionString
+        - fromGroup: slack-app-pax-financial-prod
   - type: web
     name: prod-frontend
     runtime: image
@@ -17,3 +43,9 @@ services:
       creds:
         fromRegistryCreds:
           name: paxfin-ghcr
+databases:
+  - name: prod-pax-db
+    plan: free
+    databaseName: pax_db
+    user: be_user
+    ipAllowList: []
